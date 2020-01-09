@@ -1,0 +1,193 @@
+\documentclass[a4paper]{article}
+    \usepackage{fullpage}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{textcomp}
+    \textheight=10in
+    \pagestyle{empty}
+    \raggedright
+    \usepackage{fontawesome}
+    %\renewcommand{\encodingdefault}{cg}
+%\renewcommand{\rmdefault}{lgrcmr}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+\usepackage[dvipsnames]{xcolor}
+\newcommand\myshade{85}
+\colorlet{mylinkcolor}{violet}
+\colorlet{myurlcolor}{Aquamarine}
+\colorlet{mycitecolor}{NavyBlue}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+     linkcolor=black,
+     urlcolor   = black!\myshade!black,
+}
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+    \vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer} [3] {
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
+
+\newcommand{\school} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+    % END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
+
+    \begin{document}
+
+\vspace*{-40pt}
+
+%==== Profile ====%
+\vspace*{-10pt}
+\begin{center}
+	{\Huge \scshape {Rupesh Harode}}\\
+	{\faLinkedin \href{https://www.linkedin.com/in/techytoes/}{: techytoes}}
+	$\cdot$
+	{\faGithub \href{https://github.com/techytoes}{ : techytoes}}
+	$\cdot$
+	\href{mailto:rupeshharode@gmail.com}{rupeshharode@gmail.com} $\cdot$ +919479768157 $\cdot$ Mumbai, IN \\
+\end{center}
+\vspace*{1mm}
+%==== Education ====%
+\header{Education}
+\textbf{Shri G.S. Institute of Technology and Science}\hfill Indore, IN\\
+Bachelor of Engineering in Electronics and Telecommunication, CGPA: 7.26/10 \hfill Grad: Jun 2019\\
+% Courses: Data Structures, Operating Systems, Algorithms, Computer Networks\\
+\vspace*{1mm}
+%==== Experience ====%
+\header{Work Experience}
+\textbf{SDE  \hfill Lido Learning} \hfill Aug 2019 | present\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\small{\item Implemented major UI features for all dashboards and improved overall user experience}
+	\small{\item \textbf{Leveraged Knowledge:} NodeJS, ReactJS, GraphQL, AWS}
+\end{itemize}
+
+\textbf{SDE Intern  \hfill Greedy Game} \hfill June 2019 | July 2019\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\small{\item Integrated Prometheus and Grafana to monitor data and manage alerts using Go-kit toolkit.}
+	\small{\item \textbf{Leveraged Knowledge:} Golang, Go-kit, Prometheus, Grafana.}
+\end{itemize}
+
+
+\textbf{Student Developer  \hfill Google Summer of Code} \hfill Apr 2018 | Aug 2018\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\small{\item Improved the communication plugin by adding VRPN and QSerial protocols into the communication plugin.}
+	\small{\item  Added tests and documentation for VRPN and QSerial protocols and enhancing the test coverage to 96\%.}
+	\small{\item \textbf{Leveraged Knowledge:} C++, QtCreator, VRPN, QSerial, Cmake}
+\end{itemize}
+
+\textbf{SDE, Intern  \hfill Naxap} \hfill Aug 2017 | Oct 2017\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\small{\item Implemented web-crawlers for 15+ torrent websites to crawl information essential for the search engine.}
+	\small{\item Extracted Data using XPath and CSS Selectors and integrated methods to bypass Cloudflare challenges.}
+	\small{\item \textbf{Leveraged Knowledge:} Python, Scrapy, Design Patterns}
+\end{itemize}
+
+%==== Projects ====%
+\header{Projects \hfill \sl \small{Portfolio: \href{http://techytoes.github.io}{techytoes.github.io}} \hfill \faGithub \sl \small{ \href{https://github.com/techytoes}{github.com/techytoes}}}
+
+\textbf{Multiplayer Quiz \href{https://github.com/techytoes/Multiplayer-Quiz}{\faGithub}}
+\vspace{-1mm}
+\begin{itemize}
+	\small{\item Django based Web-application mainly focusing on API and Schema which allows users to participate in a multiplayer quiz.}
+	\small{\item Implemented functionality like registration, login, adding question, creating game and playing game with a leaderboard to view progress of all users.}
+	\vspace{-1mm}
+	\small{\item \textbf{Used:} Python, Django, TastyPie, REST API.}
+	\vspace{-1mm}
+\end{itemize}
+
+\textbf{Hackathon 3.0 \href{https://github.com/techytoes/publicSanitation}{\faGithub}}
+\vspace{-1mm}
+\begin{itemize}
+	\small{\item Django based Web Application which shows most cleaned toilet nearby built as part of Hackathon, developed on top of GoogleMaps API.}
+	\small{\item A real-time feedback system built using AJAX and Jquery integrated with BackEnd.}
+	\vspace{-1mm}
+	\small{\item \textbf{Used:} Python, Django, REST API, JS, Ajax, JQuery, ChartJS, Google Maps API.}
+	\vspace{-1mm}
+\end{itemize}
+
+\textbf{Sentiment Analyzer \href{https://github.com/techytoes/Sentiment-Analyzer}{\faGithub}}
+\vspace{-1mm}
+\begin{itemize}
+	\small{\item Examine the sentiment in terms of polarity (positive or negative) with an accuracy of 96.18\%}
+	\small{\item MLP to implement NN model and NLTK is used to lemmatize .txt file.}
+	\vspace{-1mm}
+	\small{\item \textbf{Used:}  Python, TensorFlow, NLTK, Numpy.}
+	\vspace{-1mm}
+\end{itemize}
+
+\vspace*{1mm}
+
+\header{Leadership Experience}
+\textbf{Technical Lead  \hfill Codefoster} \hfill Aug 2016 | Feb 2019\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\small{\item Codefoster is the coding club of SGSITS Indore with main purpose of nurturing the culture inside college.}
+	\small{\item Supervised all the club activities which involves organizing coding events, workshops and internal discussions.}
+\end{itemize}
+
+%==== Skills ====%
+\header{Skills}
+\begin{tabular}{ l l }
+	\small{\textbf{Languages}}      & \small{Python, Javascript, C/C++}      \\
+	\small{\textbf{Technologies/Frameworks}} 
+	&
+	 \small{Django, NodeJS, ReactJS, GraphQL, Git, AWS}
+	 \\
+	\small{\textbf{Open Source Contributions}}      & \small{Sofa-Framework, Rspamd, Coala}               \\
+% 	\small{\textbf{Competitive Programming}}                     &
+% 	\href{https://www.hackerrank.com/k_akshay9721}{\underline{HackerRank}},
+%     \href{https://codeforces.com/profile/k_akshay}{\underline{Codeforces}},
+%     \href{https://www.codechef.com/users/kakshay21}{\underline{CodeChef}}
+%     \\
+% 	\small{\textbf{MOOCs}}                     &
+% 	 \small{\href{https://www.coursera.org/account/accomplishments/verify/RL9PQEPWV5ZX}{\underline{Algorithms,}}
+% 	 \href{https://www.coursera.org/account/accomplishments/verify/US5UEA64ENC5}{\underline{Parallel Programming,}} \href{https://www.coursera.org/account/accomplishments/verify/KTWGVEMQM4YQ}{\underline{Machine Learning Foundation,}} \href{https://www.coursera.org/account/accomplishments/verify/RGEFPE9K4T7D}{\underline{Neural Networks,}}}
+\end{tabular}
+\end{document}
